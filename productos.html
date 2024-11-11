@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos</title>
+    
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="vendors/bootstrap/css/bootstrap.min.css">
+    <script src="vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Smartcart --> 
+    <link rel="stylesheet" href="vendors/jquery.smartcart/dist/css/smart_cart.min.css">
+</head>
+
+<body>
+    
+    <!-- Navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-green-custom">
+        <div class="container">
+            <a class="navbar-brand fs-5" href="#">Botánica Café</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="productos.html">Productos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="quienes-somos.html">Sobre nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link" href="preguntas-frecuentes.html">FAQ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Productos -->
+    <div class="container-productos">
+        <div class="row">
+            <div class="col-md-9">
+                <div class="row" id="catalogo"></div>
+            </div>
+            <div class="col-md-3">
+                <div id="carrito">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- jQuery -->
+    <script src="vendors/jquery-3.7.1.min.js"></script>
+    
+    <!-- SmartCart -->
+    <script src="vendors/jquery.smartcart/dist/js/jquery.smartCart.min.js"></script>
+    
+    <!-- Bootstrap -->
+    <script src="vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Productos -->
+    <script src="js/productos.js"></script>
+    <script src="js/script.js"></script>
+    
+    <script>
+        'use scrict';
+        
+        $(document).ready(function() {
+            
+            // Contruyo el catalogo
+            
+            var catalogo = $('#catalogo')
+            
+            for(let producto of productos){
+                catalogo.append(
+                '<div class="sc-product-item col">'+
+                    
+                    '<img class="img-fluid" data-name="product_image" src="'+producto.img+'" alt="'+producto.nombre+'">'+
+                    
+                    '<h4 data-name="product_name">'+producto.nombre+'</h4>'+
+                    
+                    '<p data-name="product_desc">'+producto.descripcion+'</p>'+
+                    
+                    '<input name="product_price" value="'+producto.precio+'" type="hidden" />'+
+                    
+                    '<button class="sc-add-to-cart btn btn-success">Agregar al carrito</button>'+
+                    
+                    '</div>'
+                    )
+                    
+                }
+                $()
+                
+                $('#carrito').smartCart({
+                    lang: {
+                        cartTitle: 'Carrito',
+                        checkout:'Pagar',
+                        clear: 'Borrar',
+                        subtotal: 'Subtotal',
+                        cartRemove: 'x',
+                        cartEmpty: 'Nada por aqui!<br /> Elija sus productos'
+                    }
+                });
+            });
+        </script>
+        
+    </body>
+    </html>
