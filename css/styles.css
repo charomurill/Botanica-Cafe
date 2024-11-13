@@ -25,3 +25,14 @@ footer.bg-green-custom {
     padding-top: 150px !important; /* Aumenta este valor según lo que necesites */
     padding-bottom: 150px !important; /* Aumenta este valor según lo que necesites */
 }
+.d-grid{
+    margin: 50px;
+    
+}
+.cta-background {
+    background-color: rgb(91, 79, 68);
+    background-size: cover; /* La imagen cubrirá todo el contenedor */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que se repita */
+    height: 250px; /* Ajusta la altura según prefieras */
+}
