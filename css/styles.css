@@ -6,15 +6,22 @@ body {
     margin: 0;
     margin-bottom: 40px;
   }
-footer {
-    background-color: black;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    height: 40px;
-    color: white;
-    margin-top: 20px !important;
-  }
+
+  /* Footer */
+
+  footer.bg-green-custom {
+    padding-top: 150px !important; /* Aumenta este valor según lo que necesites */
+    padding-bottom: 150px !important; /* Aumenta este valor según lo que necesites */
+}
+
+.blockquote-footer {
+    margin-top: 10px;
+    font-size: 0.9rem; /* Texto más pequeño para el autor */
+    color: #000000; /* Color más claro para el autor */
+}
+
+
+  /* Carousel */
 
 .carousel-item img {
     height: 500px; /* Cambia el valor según la altura deseada */
@@ -22,16 +29,48 @@ footer {
 }
 
 .carousel-caption {
-    background: rgba(255, 255, 255, 0.5); /* Fondo oscuro semitransparente */
+    background: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente */
     padding: 20px;
     border-radius: 10px; /* Opcional: bordes redondeados */
 }
 
+#carouselTestimonios {
+    background-color: #f8f9fa; /* Fondo claro para resaltar el contenido */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    padding: 20px;
+}
+
+/* Botones de Control del Carrusel */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #ffffff; /* Verde personalizado */
+    border-radius: 50%; /* Botones circulares */
+    padding: 10px; /* Tamaño adecuado */
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.2); /* Sombra suave */
+}
+
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+    background-color: #4c4c4c; /* Verde más oscuro en hover */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%; /* Ajusta el tamaño de las áreas de control */
+}
+
+/* Transiciones Suaves */
+.carousel-inner {
+    transition: transform 0.5s ease-in-out; /* Efecto suave en el cambio de testimonio */
+}
+
 .cta-background {
-    background-image: url('../img/cafebanner.jpg'); /* Ruta de la imagen */
-    background-size: cover; /* Hace que la imagen cubra toda la sección */
-    background-position: center; /* Centra la imagen en el contenedor */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-color: rgb(91, 79, 68);
+    background-size: cover; /* La imagen cubrirá todo el contenedor */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que se repita */
+    height: 250px; /* Ajusta la altura según prefieras */
 }
 
 .container-productos{
@@ -46,21 +85,11 @@ footer {
 .navbar-nav .nav-link:hover {
     color: #ffffff; /* Un tono verde claro para el hover en los links */
 }
-footer.bg-green-custom {
-    padding-top: 150px !important; /* Aumenta este valor según lo que necesites */
-    padding-bottom: 150px !important; /* Aumenta este valor según lo que necesites */
-}
+
 .d-grid{
     margin: 50px;
-    
 }
-.cta-background {
-    background-color: rgb(91, 79, 68);
-    background-size: cover; /* La imagen cubrirá todo el contenedor */
-    background-position: center; /* Centra la imagen */
-    background-repeat: no-repeat; /* Evita que se repita */
-    height: 250px; /* Ajusta la altura según prefieras */
-}
+
 
 .uniform-img {
     width: 150px; /* Establece un ancho uniforme */
@@ -68,7 +97,8 @@ footer.bg-green-custom {
     object-fit: cover; /* Recorta la imagen para llenar el área */
     border-radius: 10px; /* Opcional: bordes redondeados */
 }
-/* Estilos específicos para el contenedor del formulario */
+
+/* formulario */
 .form-container {
     max-width: 600px;
     background-color: #f8f9fa;
@@ -89,6 +119,7 @@ footer.bg-green-custom {
     background-color: #074e74;
     border: none;
 }
+/* reseñas */
 
 .info-card {
     cursor: pointer;
@@ -119,57 +150,9 @@ footer.bg-green-custom {
     transform: scale(1.05); /* Zoom al hacer hover */
 }
 
-/* Contenedor General del Carrusel */
-#carouselTestimonios {
-    background-color: #f8f9fa; /* Fondo claro para resaltar el contenido */
-    border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    padding: 20px;
-}
-
 /* Bloque de Citas (Blockquote) */
 .blockquote {
     font-style: italic; /* Estilo clásico de cita */
     font-size: 1.25rem; /* Tamaño de fuente para destacar */
     color: #555; /* Color suave para el texto */
-}
-
-.blockquote-footer {
-    margin-top: 10px;
-    font-size: 0.9rem; /* Texto más pequeño para el autor */
-    color: #777; /* Color más claro para el autor */
-}
-
-/* Botones de Control del Carrusel */
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    background-color: #ffffff; /* Verde personalizado */
-    border-radius: 50%; /* Botones circulares */
-    padding: 10px; /* Tamaño adecuado */
-    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.2); /* Sombra suave */
-}
-
-.carousel-control-prev-icon:hover,
-.carousel-control-next-icon:hover {
-    background-color: #4c4c4c; /* Verde más oscuro en hover */
-}
-
-.carousel-control-prev,
-.carousel-control-next {
-    width: 5%; /* Ajusta el tamaño de las áreas de control */
-}
-
-/* Transiciones Suaves */
-.carousel-inner {
-    transition: transform 0.5s ease-in-out; /* Efecto suave en el cambio de testimonio */
-}
-
-/* Quitar el fondo oscuro y mejorar el estilo del blockquote-footer */
-.blockquote-footer {
-    background-color: transparent; /* Elimina cualquier fondo predeterminado */
-    color: #777; /* Mantén un color de texto suave */
-    padding: 0; /* Quita cualquier padding que genere un bloque */
-    margin: 0; /* Asegúrate de que no haya margen que provoque bloques */
-    font-style: normal; /* Opcional: quita el estilo itálico si está aplicado */
-    display: inline; /* Asegúrate de que el texto esté en línea con el párrafo */
 }
