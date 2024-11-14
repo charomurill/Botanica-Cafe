@@ -1,9 +1,34 @@
+html {
+    min-height: 100%;
+    position: relative;
+  }
+body {
+    margin: 0;
+    margin-bottom: 40px;
+  }
+footer {
+    background-color: black;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    color: white;
+    margin-top: 20px !important;
+  }
+
 .carousel-item img {
     height: 500px; /* Cambia el valor según la altura deseada */
     object-fit: cover; /* Recorta la imagen para que ocupe toda el área sin distorsionarse */
 }
+
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente */
+    padding: 20px;
+    border-radius: 10px; /* Opcional: bordes redondeados */
+}
+
 .cta-background {
-    background-image: url('img/cafebanner.jpg'); /* Ruta de la imagen */
+    background-image: url('../img/cafebanner.jpg'); /* Ruta de la imagen */
     background-size: cover; /* Hace que la imagen cubra toda la sección */
     background-position: center; /* Centra la imagen en el contenedor */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
@@ -35,4 +60,61 @@ footer.bg-green-custom {
     background-position: center; /* Centra la imagen */
     background-repeat: no-repeat; /* Evita que se repita */
     height: 250px; /* Ajusta la altura según prefieras */
+}
+
+.uniform-img {
+    width: 150px; /* Establece un ancho uniforme */
+    height: 150px; /* Establece una altura uniforme */
+    object-fit: cover; /* Recorta la imagen para llenar el área */
+    border-radius: 10px; /* Opcional: bordes redondeados */
+}
+/* Estilos específicos para el contenedor del formulario */
+.form-container {
+    max-width: 600px;
+    background-color: #f8f9fa;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Opcional: Especifica aún más los campos dentro del formulario si es necesario */
+.form-container .form-control {
+    border: 1px solid #9ab3a0;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.form-container .btn-primary {
+    background-color: #074e74;
+    border: none;
+}
+
+.info-card {
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative;
+}
+
+.hover-text {
+    background-color: rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    text-align: center;
+}
+
+.info-card:hover .hover-text {
+    opacity: 1;
+}
+
+.uniform-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.info-card:hover .uniform-img {
+    transform: scale(1.05); /* Zoom al hacer hover */
 }
