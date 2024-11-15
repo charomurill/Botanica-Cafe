@@ -8,37 +8,25 @@ const productos = [
     {
         nombre: 'Café Brasilero',
         precio: 3800,
-        img: 'img/paqueteCafe2.jpg',
+        img: 'img/cafeBrasil.jpg',
         descripcion: 'Fuerte'
     },
     {
         nombre: 'Café Colombiano',
         precio: 4000,
-        img: 'img/paqueteCafe1.jpg',
+        img: 'img/cafeColombia.jpg',
         descripcion: 'Equilibrado e intenso'
     },
     {
         nombre: 'Café Kenia',
         precio: 4000,
-        img: 'img/paqueteCafe1.jpg',
+        img: 'img/cafeKenia.jpg',
         descripcion: 'Fuerte e intenso'
     },
     {
         nombre: 'Café Etiope',
         precio: 4000,
-        img: 'img/paqueteCafe1.jpg',
+        img: 'img/cafeEtiope.jpg',
         descripcion: 'Intenso'
-    },
-    {
-        nombre: 'Café Etiope',
-        precio: 4000,
-        img: 'img/paqueteCafe1.jpg',
-        descripcion: 'Intenso'
-    },  {
-        nombre: 'Café Etiope',
-        precio: 4000,
-        img: 'img/paqueteCafe1.jpg',
-        descripcion: 'Intenso'
-    },
-    
+    }
 ];
