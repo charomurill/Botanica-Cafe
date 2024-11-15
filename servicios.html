@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Servicios</title>
+    <link rel="icon" href="img/logocafeteriabotanica.png" type="image/png">
+
     <link rel="stylesheet" href="vendors/bootstrap/css/bootstrap.min.css">
     <script src="vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="css/styles.css">
@@ -14,7 +16,7 @@
     <link rel="stylesheet" href="floating-whatsapp/floating-wpp.css">
 
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
     
     <!-- Navegación -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-green-custom">
@@ -38,45 +40,79 @@
         </div>
     </nav>
 
-    <section id="servicios" class="container py-5">
-        <h2 class="text-center mb-4">Nuestros Servicios</h2>
-        <div class="row">
-            <div class="col-md-4 mb-4">
-                <div class="card h-100 text-center">
-                    <div class="card-body">
-                        <h5 class="card-title">Asesoría Personalizada</h5>
-                        <p class="card-text">Pedí tu café favorito para eventos, o simplemente en cantidad.</p>
+    <main class="flex-fill">
+        <section id="servicios" class="container py-5">
+            <h2 class="text-center mb-4">Nuestros Servicios</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 text-center expandable-card" onclick="toggleCard(this)" style="background-image: url('img/asesoria.avif');">
+                        <div class="card-body">
+                            <h5 class="card-title text-white">Asesoría Personalizada</h5>
+                            <p class="card-text text-white">Pedí tu café favorito para eventos, o simplemente en cantidad.</p>
+                        </div>
+                        <div class="extra-info p-3">
+                            <p>Ofrecemos asesoría personalizada para que encuentres el café perfecto para tus necesidades. Nuestro equipo está disponible para ayudarte a organizar eventos especiales con la mejor selección de café.</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 text-center expandable-card" onclick="toggleCard(this)" style="background-image: url('img/baristas.avif');">
+                        <div class="card-body">
+                            <h5 class="card-title text-white">Cursos de Baristas</h5>
+                            <p class="card-text text-white">Descubrí el arte del café con nuestro cursos de Baristas.</p>
+                        </div>
+                        <div class="extra-info p-3">
+                            <p>Participa en nuestros cursos para convertirte en un experto en preparar café. Aprende técnicas avanzadas de extracción y decoración con leche para crear la taza perfecta.</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 text-center expandable-card" onclick="toggleCard(this)" style="background-image: url('img/eventos-catas.avif');">
+                        <div class="card-body">
+                            <h5 class="card-title text-white">Eventos de Cata</h5>
+                            <p class="card-text text-white">Aprende de café y catá como un profesional.</p>
+                        </div>
+                        <div class="extra-info p-3">
+                            <p>Disfruta de catas exclusivas y aprende a identificar las mejores notas de café. Conviértete en un experto en la degustación y apreciación de cafés finos.</p>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 mb-4">
-                <div class="card h-100 text-center">
-                    <div class="card-body">
-                        <h5 class="card-title">Cursos de Baristas</h5>
-                        <p class="card-text">Descubrí el arte del café con nuestro cursos de Baristas.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="card h-100 text-center">
-                    <div class="card-body">
-                        <h5 class="card-title">Eventos de Cata</h5>
-                        <p class="card-text">Aprende de café y catá como un profesional.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
+    
+    <script>
+    function toggleCard(card) {
+        const extraInfo = card.querySelector('.extra-info');
+        const isOpen = card.classList.contains('open');
+    
+        if (isOpen) {
+            // Cierra la tarjeta
+            extraInfo.style.height = '0';
+            card.classList.remove('open');
+        } else {
+            // Expande la tarjeta
+            extraInfo.style.height = extraInfo.scrollHeight + 'px';
+            card.classList.add('open');
+        }
+    }
+</script>
+    
 
-    <footer class="bg-green-custom text-white py-4 mt-5">
-        <div class="container text-center">
-            <p>&copy; 2023 Café Botánica. Todos los derechos reservados.</p>
-            <p>Síguenos en:
-                <a href="https://www.facebook.com/" class="text-white me-2">Facebook</a> |
-                <a href="https://www.instagram.com/" class="text-white ms-2">Instagram</a>
-            </p>
-        </div>
-    </footer>
+<footer class="bg-green-custom text-white py-4 mt-5">
+    <div class="container text-center">
+        <p>&copy; 2023 Café Botánica. Todos los derechos reservados.</p>
+        <p>Síguenos en:
+            <a href="https://www.facebook.com/" class="text-white me-2">Facebook</a> |
+            <a href="https://www.instagram.com/" class="text-white ms-2">Instagram</a>
+        </p>
+        <p>
+            Charo Murillo 2B - Desarrollo-Programación | Diseño Gráfico Digital 2024
+        </p>
+    </div>
+</footer>
         
 </body>
 </html>

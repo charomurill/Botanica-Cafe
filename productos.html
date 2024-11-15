@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Productos</title>
+    <link rel="icon" href="img/logocafeteriabotanica.png" type="image/png">
     
     <link rel="stylesheet" href="css/styles.css">
     
@@ -42,10 +43,10 @@
 </nav>
     
     <!-- Productos -->
-    <div class="container-productos">
+    <div class="container-productos container py-5">
         <div class="row">
             <div class="col-md-9">
-                <div class="row row-cols-3 row-cols-lg-4 d-flex" id="catalogo"></div>
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4 d-flex" id="catalogo"></div>
             </div>
             <div class="col-md-3">
                 <div id="carrito">
@@ -61,6 +62,9 @@
             <p>Síguenos en:
                 <a href="https://www.facebook.com/" class="text-white me-2">Facebook</a> |
                 <a href="https://www.instagram.com/" class="text-white ms-2">Instagram</a>
+            </p>
+            <p>
+                Charo Murillo 2B - Desarrollo-Programación | Diseño Gráfico Digital 2024
             </p>
         </div>
     </footer>
@@ -91,15 +95,15 @@
                 catalogo.append(
                 '<div class="sc-product-item col mt-5">'+
                     
-                    '<img class="img-fluid" data-name="product_image" src="'+producto.img+'" alt="'+producto.nombre+'">'+
+                    '<img class="img-fluid card-img-top" data-name="product_image" src="'+producto.img+'" alt="'+producto.nombre+'">'+
                     
-                    '<h4 data-name="product_name">'+producto.nombre+'</h4>'+
+                    '<h4 class="card-title text-center" data-name="product_name">'+producto.nombre+'</h4>'+
                     
-                    '<p data-name="product_desc">'+producto.descripcion+'</p>'+
+                    '<p class="card-text text-center" data-name="product_desc">'+producto.descripcion+'</p>'+
                     
                     '<input name="product_price" value="'+producto.precio+'" type="hidden" />'+
                     
-                    '<button class="sc-add-to-cart btn btn-success">Agregar al carrito</button>'+
+                    '<button class="sc-add-to-cart btn w-100 btn-success">Agregar al carrito</button>'+
                     
                     '</div>'
                     )
@@ -109,12 +113,12 @@
                 
                 $('#carrito').smartCart({
                     lang: {
-                        cartTitle: 'Carrito',
+                        cartTitle: '<p class="text-center text-success fw-bold">Carrito</p>',
                         checkout:'Pagar',
                         clear: 'Borrar',
                         subtotal: 'Subtotal',
                         cartRemove: 'x',
-                        cartEmpty: 'Nada por aqui!<br /> Elija sus productos'
+                        cartEmpty: '<p class="text-muted text-center">Aún no hay ningún producto seleccionado.<br /> Elija sus productos</p>'
                     }
                 });
             });

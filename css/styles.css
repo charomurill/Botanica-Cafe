@@ -4,7 +4,6 @@ html {
   }
 body {
     margin: 0;
-    margin-bottom: 40px;
   }
 
   /* Footer */
@@ -19,7 +18,6 @@ body {
     font-size: 0.9rem; /* Texto más pequeño para el autor */
     color: #000000; /* Color más claro para el autor */
 }
-
 
   /* Carousel */
 
@@ -79,7 +77,8 @@ body {
 }
 
 .bg-green-custom {
-    background-color: #5e7a5e; /* Un tono verde oscuro */
+    /*background-color: #5e7a5e; /* Un tono verde oscuro */
+    background-color: #9a5e22
 }
 
 .navbar-nav .nav-link:hover {
@@ -154,5 +153,35 @@ body {
 .blockquote {
     font-style: italic; /* Estilo clásico de cita */
     font-size: 1.25rem; /* Tamaño de fuente para destacar */
-    color: #555; /* Color suave para el texto */
+    color: #164123; /* Color suave para el texto */
+}
+.expandable-card {
+    background-size: cover;
+    background-position: center;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    position: relative;
+    min-height: 400px;
+    width: 100%;
+    
+}
+
+.expandable-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.expandable-card .extra-info {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease;
+}
+
+.expandable-card.open .extra-info {
+    height: auto;
+    padding-top: 10px; /* Espaciado extra cuando está abierto */
 }
