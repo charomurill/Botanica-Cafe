@@ -165,23 +165,25 @@ body {
     overflow: hidden;
     transition: box-shadow 0.3s ease, transform 0.3s ease;
     position: relative;
-    min-height: 400px;
+    min-height: 300px;
     width: 100%;
-    
+
 }
 
 .expandable-card:hover {
     transform: scale(1.03);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 8px 16px rgba(78, 77, 74, 0.2);
 }
 
 .expandable-card .extra-info {
     height: 0;
     overflow: hidden;
+    visibility: hidden;
     transition: height 0.3s ease;
 }
 
 .expandable-card.open .extra-info {
     height: auto;
+    visibility: visible;
     padding-top: 10px; /* Espaciado extra cuando está abierto */
 }
