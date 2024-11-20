@@ -172,7 +172,8 @@ body {
 
 .expandable-card:hover {
     transform: scale(1.03);
-    box-shadow: 0 8px 16px rgba(78, 77, 74, 0.2);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    
 }
 
 .expandable-card .extra-info {
@@ -186,4 +187,41 @@ body {
     height: auto;
     visibility: visible;
     padding-top: 10px; /* Espaciado extra cuando está abierto */
+}
+
+.expandable-card .card-body {
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro translúcido */
+    padding: 20px;
+    color: white; /* Asegura que el texto sea blanco */
+}
+.expandable-card .card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.expandable-card .extra-info {
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro para el texto desplegable */
+    color: white;
+    visibility: hidden; /* Oculta inicialmente */
+    height: 0;
+    overflow: hidden;
+    padding: 0 20px;
+    transition: height 0.3s ease, visibility 0.3s ease 0.3s;
+}
+
+.expandable-card.open .extra-info {
+    visibility: visible;
+    height: auto; /* Ajusta automáticamente la altura según el contenido */
+    padding: 20px;
+}
+
+.expandable-card .extra-info p {
+    font-size: 1rem; /* Tamaño del texto desplegable */
+    font-weight: normal;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); /* Sombra para mayor legibilidad */
+}
+
+.expandable-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }

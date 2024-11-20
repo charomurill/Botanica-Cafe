@@ -30,3 +30,4 @@ const productos = [
         descripcion: 'Intenso'
     }
 ];
+
